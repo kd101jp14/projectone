@@ -5,4 +5,4 @@ var authURL = "https://accounts.spotify.com/authorize?client_id="+clientID+"&res
 $.ajax({
     url: authURL,
     method: "GET"
-})
+}).then()
