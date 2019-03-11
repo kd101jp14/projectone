@@ -8,7 +8,7 @@ $(document).ready(function () {
 
         $("#moodOutput").empty();
         $("#playlistOutput").empty();
-        $("playlistHolder").empty();
+        $(".playlistHolder").empty();
 
         $.ajax({
             url: queryURL,
@@ -25,28 +25,28 @@ $(document).ready(function () {
             $("#journalEntry").prepend(userInput);
            
             if (emotionResponse === "Angry") {
-                // Add appropriate playlist.
-                $("playlistHolder").append();
+                /// Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div> </div>");
             }
             if (emotionResponse === "Bored") {
-               // Add appropriate playlist.
-                $("playlistHolder").append();
+               // Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div>" + + "</div>");
             }
             if (emotionResponse === "Excited") {
-               // Add appropriate playlist.
-                $("playlistHolder").append();
+               /// Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div> </div>");
             }
             if (emotionResponse === "Fear") {
-               // Add appropriate playlist.
-                $("playlistHolder").append();
+               /// Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div> </div>");
             }
             if (emotionResponse === "Happy") {
-               // Add appropriate playlist.
-                $("playlistHolder").append();
+               /// Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div> </div>");
             }
             if (emotionResponse === "Sad") {
-               // Add appropriate playlist.
-                $("playlistHolder").append();
+               /// Embed appropriate playlist between plus signs.
+                $(".playlistHolder").append("<div> </div>");
             };
             $("#userInput").val("");
 
