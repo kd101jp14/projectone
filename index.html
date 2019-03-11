@@ -8,8 +8,8 @@
     <title>Project One - DayVibe</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- External CSS File -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 
 </head>
 
@@ -20,14 +20,14 @@
 
         <div class="tile is-ancestor">
             <div class="tile is-parent">
-                <div class="tile is-child box" id = "questionDiv">
-                    <p class="title" id ="question">How was your day?</p>
+                <div class="tile is-child box" id="questionDiv">
+                    <p class="title" id="question">How was your day?</p>
                     <div class="field">
                         <div class="control">
-                            <input class="input is-info" type="text" placeholder="Type Here...">
+                            <input class="input is-info" id="userInput" type="text" placeholder="Type Here...">
                         </div>
                     </div> <br>
-                    <a class="button is-info">Submit</a>
+                    <a class="button is-info" id="submitButton">Submit</a>
                 </div>
             </div>
             <div class="tile is-4 is-vertical is-parent">
@@ -57,18 +57,15 @@
 
                     </div>
 
-
                 </div>
             </div>
-
         </div>
-
-
-
-
-
     </div>
-
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <!-- External Javascript File -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
