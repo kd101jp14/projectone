@@ -4,9 +4,7 @@ $(document).ready(function () {
 
     var queryURL = "https://apis.paralleldots.com/v3/emotion?" + "text=" + userInput + "&api_key=XHEmlBGDQ6f880Y8TmdJFizVECdu2hUo7sGZWbzbfhQ"
 
-    $("#submitButton").on("click", function (event) {
-
-        event.preventDefault();
+    $("#submitButton").on("click", function () {
 
         $("#moodOutput").empty();
         $("#playlistOutput").empty();
@@ -18,29 +16,36 @@ $(document).ready(function () {
             console.log(response);
             console.log(response.emotion.emotion);
 
+            var emotionResponse = response.emotion.emotion;
+
+            $("#journalEntry").prepend("<hr>");
+            $("#journalEntry").prepend(userInput);
+            $("#moodOutput").append("<p>" + emotionResponse + "</p>");
+            $("#playlistOutput").append("<div>").addClass("playlistHolder");
+           
             if (response.emotion.emotion === "Angry") {
-                $("#moodOutput").append("<p>Angry</p>");
-                $("#playlistOutput").append();
+                // Add appropriate playlist.
+                $("playlistHolder").append()
             }
             if (response.emotion.emotion === "Bored") {
-                $("#moodOutput").append("<p>Bored</p>");
-                $("#playlistOutput").append();
+               // Add appropriate playlist.
+                $("playlistHolder").append()
             }
             if (response.emotion.emotion === "Excited") {
-                $("#moodOutput").append("<p>Excited</p>");
-                $("#playlistOutput").append();
+               // Add appropriate playlist.
+                $("playlistHolder").append()
             }
             if (response.emotion.emotion === "Fear") {
-                $("#moodOutput").append("<p>Fear</p>");
-                $("#playlistOutput").append();
+               // Add appropriate playlist.
+                $("playlistHolder").append()
             }
             if (response.emotion.emotion === "Happy") {
-                $("#moodOutput").append("<p>Happy</p>");
-                $("#playlistOutput").append();
+               // Add appropriate playlist.
+                $("playlistHolder").append()
             }
             if (response.emotion.emotion === "Sad") {
-                $("#moodOutput").append("<p>Sad</p>");
-                $("#playlistOutput").append();
+               // Add appropriate playlist.
+                $("playlistHolder").append()
             };
             $("#userInput").val("");
 
