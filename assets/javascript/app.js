@@ -4,7 +4,9 @@ $(document).ready(function () {
 
     var queryURL = "https://apis.paralleldots.com/v3/emotion?" + "text=" + userInput + "&api_key=XHEmlBGDQ6f880Y8TmdJFizVECdu2hUo7sGZWbzbfhQ"
 
-    $("#submitButton").on("click", function () {
+    $("#submitButton").on("click", function (event) {
+
+        event.preventDefault();
 
         $("#moodOutput").empty();
         $("#playlistOutput").empty();
@@ -40,7 +42,7 @@ $(document).ready(function () {
                 $("#moodOutput").append("<p>Sad</p>");
                 $("#playlistOutput").append();
             };
-            $("#userInput").empty();
+            $("#userInput").val("");
 
         }).fail(function (jqXHR, textStatus, errorThrown) {
             console.error(errorThrown);
