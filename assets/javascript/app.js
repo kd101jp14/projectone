@@ -18,6 +18,13 @@ $(document).ready(function() {
       .then(function(response) {
         var emotion = response.emotion.emotion;
         $("#moodOutput").text(emotion);
+
+        var thisDate = new Date();
+        var format = "LLLL";
+        var result = moment(thisDate).format(format);
+        console.log(result);
+        
+        $("#journalEntry").prepend("<br>" + result + ": " + userInput + "<br>");
         $("#userInput").val("");
 
         // Put Spotify Conditionals here
