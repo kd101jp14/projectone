@@ -18,6 +18,7 @@ $(document).ready(function() {
       .then(function(response) {
         var emotion = response.emotion.emotion;
         $("#moodOutput").text(emotion);
+        $("#userInput").val("");
 
         // Put Spotify Conditionals here
       })
