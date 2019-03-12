@@ -15,52 +15,50 @@ $(document).ready(function () {
     var database = firebase.database();
 
     $("#submitButton").on("click", function (event) {
+
+        // Prevent button from preventing form
         event.preventDefault();
 
-        var userInput = $("#userInput")
-            .val()
-            .trim();
+        // Store user input as a variable
+        var userInput = $("#userInput").val().trim();
 
-        var queryURL =
-            "https://apis.paralleldots.com/v3/emotion?text=" +
-            userInput +
-            "&api_key=XHEmlBGDQ6f880Y8TmdJFizVECdu2hUo7sGZWbzbfhQ";
+        // Concatenate query URl with user input and necessary parameters
+        var queryURL = "https://apis.paralleldots.com/v3/emotion?text=" + userInput + "&api_key=XHEmlBGDQ6f880Y8TmdJFizVECdu2hUo7sGZWbzbfhQ";
 
+        //Make AJAX Request
         $.ajax({
-                url: queryURL,
-                method: "POST"
-            })
-            .then(function (response) {
+            url: queryURL,
+            method: "POST"
+        }).then(function (response) {
 
-                // Display the emotion from the user's input on the page.
-                var emotion = response.emotion.emotion;
-                $("#moodOutput").text(emotion);
+            // Display the emotion from the user's input on the page.
+            var emotion = response.emotion.emotion;
+            $("#moodOutput").text(emotion);
 
-                // Capture and format the date and time of the user's input.
-                var thisDate = new Date();
-                var format = "LLLL";
-                var time = moment(thisDate).format(format);
-                time.css("font-weight", "bold");
-                var journalEntry = "<br>" + time + ": " + userInput + "<br>";
+            // Capture and format the date and time of the user's input.
+            var thisDate = new Date();
+            var format = "LLLL";
+            var time = moment(thisDate).format(format);
+            time.css("font-weight", "bold");
+            var journalEntry = "<br>" + time + ": " + userInput + "<br>";
 
-                // Keys and values for Firebase database
-                var persisting = {
-                    emotion: emotion,
-                    // ADD PLAYLIST KEY AND VALUE HERE!!!
-                    journalEntry: journalEntry
-                };
+            // Keys and values for Firebase database
+            var persisting = {
+                emotion: emotion,
+                // ADD PLAYLIST KEY AND VALUE HERE!!!
+                journalEntry: journalEntry
+            };
 
-                // Push keys and values to database.
-                database.ref().push(persisting);
+            // Push keys and values to database.
+            database.ref().push(persisting);
 
-                // Clear out input field.
-                $("#userInput").val("");
+            // Clear out input field.
+            $("#userInput").val("");
 
-                // Put Spotify Conditionals here
-            })
-            .fail(function (jqXHR, textStatus, errorThrown) {
-                console.error(errorThrown);
-            });
+            // Put Spotify Conditionals here
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.error(errorThrown);
+        });
     });
     database.ref().on("child_added", function (childSnapshot) {
         // Log changes
