@@ -60,6 +60,7 @@ $(document).ready(function () {
                 $('#angry').show(); 
             } 
         })
+        $("#userInput").val("");
     });
 
 });
