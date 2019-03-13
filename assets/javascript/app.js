@@ -40,7 +40,6 @@ $(document).ready(function () {
             var thisDate = new Date();
             var format = "LLLL";
             var time = moment(thisDate).format(format);
-            time.css("font-weight", "bold");
             var journalEntry = "<br>" + time + ": " + userInput + "<br>";
 
             // Keys and values for Firebase database
