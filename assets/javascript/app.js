@@ -1,4 +1,25 @@
-$(document).ready(function () {
+var zomatoAPI = "f191d89df42245690eb81a84e0480aa6";
+var userCity = "Nashville";
+var zomatoRestaurant = "https://developers.zomato.com/api/v2.1/search?entity_type=city&entity_id=1138";
+var proxyURL = "https://cors-anywhere.herokuapp.com/"
+
+$.ajax({
+    url: proxyURL + zomatoRestaurant,
+    method: "GET",
+    headers: {user_key: zomatoAPI}
+}).then(function(response){
+    var random = Math.floor(Math.random() * 20);
+    var restaurant = {
+        name: response.restaurants[random].restaurant.name,
+        menu: response.restaurants[random].restaurant.url
+    }
+    console.log(restaurant.name);
+    console.log(restaurant.menu);
+    
+    var restaurantBlock = 
+
+});
+
 
     //$("#happy").hide();
     // Initialize Firebase
@@ -100,4 +121,3 @@ $(document).ready(function () {
         $("#moodOutput").text(emotion);
         $("#journalEntry").prepend(journalEntry);
     });
-});
