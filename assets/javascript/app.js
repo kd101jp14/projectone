@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-
+    //$("#happy").hide();
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyDOwSgSbAXSZcTG7tvCXZC4bZgIp0XfF04",
@@ -34,7 +34,37 @@ $(document).ready(function () {
 
             // Display the emotion from the user's input on the page.
             var emotion = response.emotion.emotion;
+
             $("#moodOutput").text(emotion);
+
+            if (emotion === "Happy") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/6DqjLBNmHwCZi64j9Dw4GU" width="300"');
+
+            } else if (emotion === "Sad") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/2xSba5dBzk5Z3vrJTSVnOF" width="300"');
+            }
+            else if (emotion === "Angry") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/1JQsHRdkIgoke330hZ4l0t" width="300"');
+            }
+            else if (emotion === "Sarcasm") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/08V5N2ioq0duf0dJEWXsq2" width="300"');
+            }
+            else if (emotion === "Fear") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/3AUeMGIbrN67A6yrhSgeL8" width="300"');
+            }
+            else if (emotion === "Bored") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/5e0f4mXyVtL16V2UXYS68X" width="300"');
+            }
+            else if (emotion === "Excited") {
+                $("#mood").attr('hidden', false);
+                $("#mood").attr('src', 'https://open.spotify.com/embed/user/vody62sqm15qnn28g2efwk4r0/playlist/2d1a9qSU1JCkA3OALPL5DN" width="300"');
+            }
 
             // Capture and format the date and time of the user's input.
             var thisDate = new Date();
@@ -45,7 +75,6 @@ $(document).ready(function () {
             // Keys and values for Firebase database
             var persisting = {
                 emotion: emotion,
-                // ADD PLAYLIST KEY AND VALUE HERE!!!
                 journalEntry: journalEntry
             };
 
