@@ -29,8 +29,7 @@ html {
 }
 
 .title{
-    color: white;
-    
+    color: white;   
 }
 
 #outputBox{
@@ -38,13 +37,7 @@ html {
 }
 #journalBox{
     background-color: rgba(117, 190, 218, 0.7);
-
 }
-#journalp{
-    margin-top: 20px;
-
-}
-
 
 
 
