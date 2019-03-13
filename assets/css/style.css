@@ -3,6 +3,8 @@ html {
 
 }
 
+
+
 .navbar {
     background-color: rgba(117, 190, 218, 0.7 );
     margin-bottom: 30px;
@@ -21,17 +23,13 @@ html {
 #mainContainer {
     text-align: center;
 }
-
-
 #questionDiv{
     background-color: rgba(117, 190, 218, 0.7);
-    
     font-weight: bolder;
 }
 
-
-#question{
-    margin-top: 25%;
+.title{
+    color: white;
     
 }
 
@@ -40,6 +38,11 @@ html {
 }
 #journalBox{
     background-color: rgba(117, 190, 218, 0.7);
+
+}
+#journalp{
+    margin-top: 20px;
+
 }
 
 
