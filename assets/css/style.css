@@ -35,6 +35,10 @@ html {
 #outputBox{
     background-color: rgba(117, 190, 218, 0.7);
 }
+#journalEntry{
+    overflow: auto;
+    height: 400px;
+}
 #journalBox{
     background-color: rgba(117, 190, 218, 0.7);
 }
