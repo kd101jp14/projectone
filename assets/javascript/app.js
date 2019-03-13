@@ -40,8 +40,7 @@ var proxyURL = "https://cors-anywhere.herokuapp.com/"
 
             // Display the emotion from the user's input on the page.
             var emotion = response.emotion.emotion;
-
-            $("#moodOutput").text(emotion);
+            console.log(emotion);
 
             if (emotion === "Happy") {
                 $("#mood").attr('hidden', false);
@@ -95,6 +94,8 @@ var proxyURL = "https://cors-anywhere.herokuapp.com/"
             console.error(errorThrown);
         });
 
+        $("#restaurantOutput").empty();
+
         $.ajax({
             url: proxyURL + zomatoRestaurant,
             method: "GET",
@@ -126,3 +127,7 @@ var proxyURL = "https://cors-anywhere.herokuapp.com/"
         $("#moodOutput").text(emotion);
         $("#journalEntry").prepend(journalEntry);
     });
+
+    $(document).ready(function(event){
+        $("#restaurantOutput").empty();
+    })
