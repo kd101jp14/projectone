@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project One - DayVibe</title>
+    <title>DAY . VIBE</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     
@@ -18,10 +18,7 @@
 </head>
 
 <body>
-
     <div class="container" id="mainContainer">
-
-
         <nav class="navbar level" role="navigation">
             <div class="navbar-brand level-item">
                 <a class="navbar-item">
@@ -29,8 +26,6 @@
                 </a>
             </div>
         </nav>
-
-
         <div class="tile is-ancestor">
             <div class="tile is-parent">
                 <div class="tile is-child box" id="questionDiv">
@@ -47,40 +42,29 @@
                 <div class="tile is-child box">
                     <p class="title">Your Current Mood:</p>
                     <div class="box" id="moodOutput">
-
                     </div>
                     <p class="title">Playlist:</p>
-
                     <div class="box" id="playlistOutput">
-
                     </div>
                 </div>
                 <div class="tile is-child box">
                     <p class="title">Journal:</p>
-
-                    <div class="box" id="playlistOutput">
-
-                    </div>
-
-                    <div class="box" id="playlistOutput">
-
-                    </div>
-
-                    <div class="box" id="playlistOutput">
-
+                    <div class="box" id="journalEntry">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-        
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <!-- Moment.js CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <!-- Firebase Database Script -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+        <!-- External Javascript File -->
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
 
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-    <!-- External Javascript File -->
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
