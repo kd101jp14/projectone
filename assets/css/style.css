@@ -3,8 +3,6 @@ html {
 
 }
 
-
-
 .navbar {
     background-color: rgba(117, 190, 218, 0.7 );
     margin-bottom: 30px;
@@ -30,6 +28,10 @@ html {
 
 .title{
     color: white;   
+}
+
+#submitButton {
+    margin-bottom: 20px;
 }
 
 #outputBox{
