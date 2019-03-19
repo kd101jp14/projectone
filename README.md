@@ -32,7 +32,7 @@ Day Vibe is an entertainment web application targeted toward teens and young adu
 This project does not have a license and is not currently open for contributions. Suggestions are welcome.
 
 ## Contact
-ltduran.lsp@gmail.com
-memccormack55@gmail.com
-davis.kyra@rocketmail.com
-ronaldcubillo92@gmail.com
+- ltduran.lsp@gmail.com
+- memccormack55@gmail.com
+- davis.kyra@rocketmail.com
+- ronaldcubillo92@gmail.com
